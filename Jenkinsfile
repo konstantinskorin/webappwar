@@ -22,5 +22,10 @@ pipeline {
         junit(testResults: 'target/surefire-reports/*.xml', healthScaleFactor: 1)
       }
     }
+    stage('') {
+      steps {
+        archiveArtifacts(artifacts: 'target/mywebapp.war', onlyIfSuccessful: true)
+      }
+    }
   }
 }
