@@ -18,7 +18,4 @@ pipeline {
       }
     }
   }
-  environment {
-    MAVEN = 'tool name: \'Maven 3.6.2\''
-  }
 }
