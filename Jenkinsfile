@@ -14,7 +14,7 @@ pipeline {
     stage('Build') {
       steps {
         tool 'Maven 3.6.2'
-        sh 'mvn clean package'
+        sh '/opt/maven/maven/bin/mvn clean package'
       }
     }
   }
