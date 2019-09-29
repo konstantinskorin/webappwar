@@ -17,9 +17,9 @@ pipeline {
         sh '/opt/maven/maven/bin/mvn clean package'
       }
     }
-    stage('Archive artifact') {
+    stage('Tests result') {
       steps {
-        junit(testResults: 'target/surefire-reports/*.xml\'', healthScaleFactor: 1)
+        junit(testResults: 'target/surefire-reports/*.xml', healthScaleFactor: 1)
       }
     }
   }
